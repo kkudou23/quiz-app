@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 全ページ共通のスタイル */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* 各ページ共通のスタイル */
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* ページ非表示のスタイル */
+.page.hidden {
+    display: none;
+}
+
+/* フレックスボックス */
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* グリッドレイアウト */
+.grid-col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+/* 余白 */
+.gap-sm { gap: 10px; }
+.gap-md { gap: 20px; }
+.gap-lg { gap: 30px; }
+
+/* 横幅 */
+.w-sm { width: 320px; }
+.w-md { width: 480px; }
+.w-lg { width: 640px; }
+
+/* テキストサイズ */
+.text-sm { font-size: 12px; }
+.text-md { font-size: 16px; }
+.text-lg { font-size: 20px; }
+
+/* ボタン */
+.button {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.button:hover {
+    background-color: "0056b3";
+}
+
+.button:active {
+    background-color: "0056b3";
+}
+
+/* テキスト */
+.text-64 {
+    font-size: 64px;
+}
+
+/* ダイアログ */
+.dialog {
+    margin: auto;
+    padding: 20px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* プログレスバー */
+.progress {
+    width: 100%;
+    height: 10px;
+    -webkit-appearance: none;
+}
+
+::-webkit-progress-value {
+    background-color: orange;
+}

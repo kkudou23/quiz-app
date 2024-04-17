@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地理クイズアプリ</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="container">
+        <!-- スタート画面 -->
+        <div id="startPage" class="page w-md gap-lg">
+            <div class="flex-col">
+                <h1>地理クイズアプリ</h1>
+                <div>地理がテーマの4択クイズアプリです。</div>        
+            </div>
+            <div class="flex-col">
+                <button type="button" id="startButton" class="button">
+                    プレイする
+                </button>
+            </div>
+        </div>
+
+        <!-- クイズの問題画面 -->
+        <div id="questionPage" class="page hidden w-lg gap-lg">
+            <div class="flex-col text-lg">
+                <h2 id="questionNumber">第n問</h2>
+                <div id="questionText">問題文</div>        
+            </div>
+            <progress
+                id="questionProgress" 
+                max="100" 
+                value="0" 
+                class="progress"
+            ></progress>
+            <div class="grid-col-2">
+                <button type="button" class="button">選択肢1</button>
+                <button type="button" class="button">選択肢2</button>
+                <button type="button" class="button">選択肢3</button>
+                <button type="button" class="button">選択肢4</button>
+            </div>
+        </div>
+
+        <!-- クイズの結果画面 -->
+        <div id="resultPage" class="page hidden w-md gap-lg">
+            <div class="flex-col text-lg">
+                <h2>クイズ結果</h2>
+                <div id="resultMessage">正解率 : n%</div>
+            </div>
+            <div class="flex-col">
+                <button type="button" id="backButton" class="button">
+                    スタート画面に戻る
+                </button>
+            </div>
+        </div>
+
+        <!-- ダイアログ -->
+        <dialog id="dialog" class="dialog w-sm">
+            <div class="flex-col gap-sm">
+                <div id="questionResult" class="text-64">⭕❌</div>
+                    <button type="button" id="nextButton" class="button text-md">
+                        次の問題へ
+                    </button>
+                </div>
+            </div>
+        </dialog>
+    </div>
+
+    <script type="text/javascript" src="quiz.js" defer></script>
+</body>
+</html>
